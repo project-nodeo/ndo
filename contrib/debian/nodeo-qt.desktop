@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Nodeo
+Comment=Nodeo P2P Cryptocurrency
+Comment[fr]=Nodeo, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Nodeo, eşten eşe kriptografik sanal para birimi
+Exec=nodeo-qt %u
+Terminal=false
+Type=Application
+Icon=nodeo128
+MimeType=x-scheme-handler/nodeo;
+Categories=Office;Finance;

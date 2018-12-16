@@ -1,0 +1,26 @@
+# /etc/conf.d/nodeod: config file for /etc/init.d/nodeod
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/nodeo/nodeo.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/nodeod"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/nodeod.pid"
+
+# Where to write nodeod data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/nodeod"
+
+# User and group to own nodeod process
+#BITCOIND_USER="nodeo"
+#BITCOIND_GROUP="nodeo"
+
+# Path to nodeod executable
+#BITCOIND_BIN="/usr/bin/nodeod"
+
+# Nice value to run nodeod under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

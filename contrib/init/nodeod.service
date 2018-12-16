@@ -1,0 +1,26 @@
+[Unit]
+Description=Nodeo's distributed currency daemon
+After=network.target
+
+[Service]
+User=nodeo
+Group=nodeo
+
+Type=forking
+PIDFile=/var/lib/nodeod/nodeod.pid
+
+ExecStart=/usr/bin/nodeod -daemon -pid=/var/lib/nodeod/nodeod.pid \
+          -conf=/etc/nodeo/nodeo.conf -datadir=/var/lib/nodeod
+
+ExecStop=-/usr/bin/nodeo-cli -conf=/etc/nodeo/nodeo.conf \
+         -datadir=/var/lib/nodeod stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
